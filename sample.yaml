@@ -1,0 +1,16 @@
+---
+
+- hosts: test
+  tasks:
+        - name: Copy file from source to target server
+          ansible.builtin.copy:
+             src: file1
+             dest: /tmp/file1
+             owner: bhagyashrijagtap
+             group: bhagyashrijagtap
+             mode: '0644'  
+         
+
+        - name: Echo some words
+          ansible.builtin.debug:
+             msg: "this is Ansible demo successfull"       
